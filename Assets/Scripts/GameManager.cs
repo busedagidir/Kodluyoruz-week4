@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq; //find & search
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -39,11 +40,11 @@ public class GameManager : MonoBehaviour
     }
 
     //oyun sonu 
-    public GameObject completeLevelUI;
+   // public GameObject completeLevelUI;
 
     public void CompleteLevel()
     {
-        completeLevelUI.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     //baslangıc ekranı icin
